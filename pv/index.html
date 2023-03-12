@@ -1,0 +1,436 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <link rel="preload" href="https://scripts.converteai.net/1db8e03a-c1fc-4fa6-b094-4a5346a615e6/players/63b36bbf8fa5cc0009ec92b7/player.js" as="script">
+    <link rel="preload" href="https://cdn.converteai.net/lib/js/smartplayer/v1/smartplayer.min.js" as="script">
+    <link rel="preload" href="https://images.converteai.net/1db8e03a-c1fc-4fa6-b094-4a5346a615e6/players/63b36bbf8fa5cc0009ec92b7/thumbnail.jpg" as="image">
+    <link rel="preload" href="https://cdn.converteai.net/1db8e03a-c1fc-4fa6-b094-4a5346a615e6/63ade75522206d000a63c834/playlist.m3u8" as="fetch">
+    <link rel="dns-prefetch" href="https://cdn.converteai.net">
+    <link rel="dns-prefetch" href="https://scripts.converteai.net">
+    <link rel="dns-prefetch" href="https://images.converteai.net">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cabin:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&family=Dosis:wght@200;300;400;500;600;700;800&family=Oswald:wght@200;300;400;500;600;700&family=Signika:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./assets/css/com.css">
+    <title>Saude Perfeita Hoje</title>
+    <style type="text/css">
+      header {
+      color: rgb(255, 255, 255);
+      background-color: #1D598F;
+      background-position: center;
+      background-size: cover;
+      background-attachment: fixed;
+      background-blend-mode: darken;
+      }
+      .banner{
+      background-color: #11395C;
+      }
+    </style>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  </head>
+  <body>
+    <header class="py-4">
+      <div class="container">
+        <div class="row justify-content-center">
+          <div class="col-lg-8 text-center">
+            <img class="img-fluid mb-3" src="./headline.png">
+            <div class="video-RybStt3349992" style="padding:56.25% 0 0 0;position:relative;">
+              <div id="unmute" style="position: absolute;top: 0;bottom: 0;left: 0;width: 100%;height: 100%;border: 0;z-index: 1;display: flex; flex-direction: row; justify-content: center; align-items: center;" onclick="player.playVideo();document.getElementById('unmute').style.display='none';document.getElementById('pause').style.display='block';player.unMute();">
+                <img src="./mute.png" style="max-width: 100%; height: auto;">
+              </div>
+              <div id="play" style="position: absolute;top: 0;bottom: 0;left: 0;width: 100%;height: 100%;border: 0;z-index: 1;display: none; flex-direction: row; justify-content: center; align-items: center;" onclick="player.playVideo();document.getElementById('play').style.display='none';document.getElementById('pause').style.display='block';player.playVideo();">
+                <img src="./play.png" style="max-width: 100%; height: auto;">
+              </div>
+              <div id="pause" style="position: absolute;top: 0;bottom: 0;left: 0;width: 100%;height: 100%;border: 0;z-index: 1; display: none;" onclick="player.pauseVideo();document.getElementById('play').style.display='flex';document.getElementById('pause').style.display='none';"></div>
+              <div id="player" style="position:absolute;top:0;left:0;width:100%;height:100%;"></div>
+            </div>
+            <div class="quadro" style="margin-top: 10px;color: #ffffff;">
+              <b>👁 <span id="number"></span> PESSOAS ESTÃO ASSISTINDO A ESSE VÍDEO AGORA...</b>
+              <script>
+                function add(){number+=Math.floor((Math.random()*6)+1);document.getElementById("number").innerHTML=number;setTimeout("add()",10000);}        
+                function generate(){number=Math.floor(Math.random()*543)+278;document.getElementById("number").innerHTML=number;add();}
+                generate();
+              </script>
+              </span>
+            </div>
+            <br>
+            <div id="cta1" class="d-none" style="font-family: montserrat">
+              <a href="https://pay.hotmart.com/H79804374W?off=odso0dxu&checkoutMode=10" class="a-btn zoom-in-out max-w-lg-40 mx-auto" style="text-decoration: none;">
+              <span class="span-btn">EU QUERO COMEÇAR A EMAGRECER HOJE</span>
+              </a>
+              <img class="img-fluid" src="./assets/img/secure.webp" style="width:80%">
+            </div>
+          </div>
+        </div>
+      </div>
+      </div>
+    </header>
+    <section class="comments py-4">
+      <div class="container" >
+        <div class="row justify-content-center">
+          <div class="col-lg-8 row justify-content-center">
+            <div class="fb-comments" style="background: #ffffff; margin-top: 5px;">
+              <div class="fb-comments-header">
+                <span>12 comentários</span>
+              </div>
+              <div class="fb-comments-wrapper" id="2">
+                <table class="fb-comments-comment">
+                  <tbody>
+                    <tr>
+                      <td rowspan="3" class="fb-comments-comment-img"><img src="./assets/img/comentarios/i1.webp"></td>
+                      <td>
+                        <font class="fb-comments-comment-name">
+                          <name>Joana Maria Oliveira</name>
+                        </font>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td class="fb-comments-comment-text">Marcos muito obrigada! A sua fórmula caseira me fez emagrecimento 10kg em poucas semanas.😍😍</td>
+                    </tr>
+                    <tr>
+                      <td class="fb-comments-comment-actions">
+                        <like>Curtir</like>
+                        ·
+                        <reply>Comentar</reply>
+                        <date>4 min</date>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+              <div class="fb-comments-wrapper" id="3">
+                <table class="fb-comments-comment">
+                  <tbody>
+                    <tr>
+                      <td rowspan="3" class="fb-comments-comment-img"><img src="./assets/img/comentarios/i2.webp"></td>
+                      <td>
+                        <font class="fb-comments-comment-name">
+                          <name>Cristina Santos</name>
+                        </font>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td class="fb-comments-comment-text">Ele também me ajudou perdi 22kg com essa fórmula caseira, muito boa</td>
+                    </tr>
+                    <tr>
+                      <td class="fb-comments-comment-actions">
+                        <like>Curtir</like>
+                        ·
+                        <reply>Comentar</reply>
+                        <date>5 min</date>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+              <div class="fb-comments-wrapper" id="4">
+                <table class="fb-comments-comment">
+                  <tbody>
+                    <tr>
+                      <td rowspan="3" class="fb-comments-comment-img"><img src="./assets/img/comentarios/i3.webp"></td>
+                      <td>
+                        <font class="fb-comments-comment-name">
+                          <name>Sofia Pietra</name>
+                        </font>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td class="fb-comments-comment-text">Cientista Marcos esse vídeo seu mudou a minha vida, já são 20 kilos a menos em 4 meses, agradecida 🙏🙏</td>
+                    </tr>
+                    <tr>
+                      <td class="fb-comments-comment-actions">
+                        <like>Curtir</like>
+                        ·
+                        <reply>Comentar</reply>
+                        <date>12 min</date>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+              <div class="fb-comments-wrapper" id="5">
+                <table class="fb-comments-comment">
+                  <tbody>
+                    <tr>
+                      <td rowspan="3" class="fb-comments-comment-img"><img src="./assets/img/comentarios/i4.webp"></td>
+                      <td>
+                        <font class="fb-comments-comment-name">
+                          <name>Juliana Castro</name>
+                        </font>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td class="fb-comments-comment-text">Tomei essa fórmula caseira durante 1 mês, acompanhada com uma alimentação melhor, perdir 10 quilos. Obrigada Marcos!🥰 </td>
+                    </tr>
+                    <tr>
+                      <td class="fb-comments-comment-actions">
+                        <like>Curtir</like>
+                        ·
+                        <reply>Comentar</reply>
+                        <date>19 min</date>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+              <div class="fb-comments-wrapper" id="6">
+                <table class="fb-comments-comment">
+                  <tbody>
+                    <tr>
+                      <td rowspan="3" class="fb-comments-comment-img"><img src="./assets/img/comentarios/i5.webp"></td>
+                      <td>
+                        <font class="fb-comments-comment-name">
+                          <name>Nilva Lopes</name>
+                        </font>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td class="fb-comments-comment-text">Estou MUIIITOO feliz Marcos, a 5 meses atrás eu estava com 72kg e hoje estou com 58kg até postei uma foto no meu perfil aqui no face do antes e depois. Obrigada por contar essa fórmula pra gente 😘😘😘</td>
+                    </tr>
+                    <tr>
+                      <td class="fb-comments-comment-actions">
+                        <like>Curtir</like>
+                        ·
+                        <reply>Comentar</reply>
+                        <date>24 min</date>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+              <div class="fb-comments-wrapper" id="7">
+                <table class="fb-comments-comment">
+                  <tbody>
+                    <tr>
+                      <td rowspan="3" class="fb-comments-comment-img"><img src="./assets/img/comentarios/i6.webp"></td>
+                      <td>
+                        <font class="fb-comments-comment-name">
+                          <name>Isabela Vargas</name>
+                        </font>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td class="fb-comments-comment-text">Pessoal eu achava que era mentira, mas hoje completa a primeira semana tomando e eu ja perdi 2 quilos.😱 Obrigada por compartilhar isso Marcos🥰</td>
+                    </tr>
+                    <tr>
+                      <td class="fb-comments-comment-actions">
+                        <like>Curtir</like>
+                        ·
+                        <reply>Comentar</reply>
+                        <date>26 min</date>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+              <div class="fb-comments-wrapper" id="9">
+                <table class="fb-comments-comment">
+                  <tbody>
+                    <tr>
+                      <td rowspan="3" class="fb-comments-comment-img"><img src="./assets/img/comentarios/i7.webp"></td>
+                      <td>
+                        <font class="fb-comments-comment-name">
+                          <name>Camila Sutra</name>
+                        </font>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td class="fb-comments-comment-text">Gente como é facil fazer né, eu nunca imaginei que tinha algo assim.</td>
+                    </tr>
+                    <tr>
+                      <td class="fb-comments-comment-actions">
+                        <like>Curtir</like>
+                        ·
+                        <reply>Comentar</reply>
+                        <date>39 min</date>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+              <button class="fb-comments-loadmore" onclick="javascript:loadMore();">Carregar mais 5 comentários...</button>
+              <div style="display:none" id="more">
+                <div class="fb-comments-wrapper">
+                  <table class="fb-comments-comment" id="10">
+                    <tbody>
+                      <tr>
+                        <td rowspan="3" class="fb-comments-comment-img"><img src="./assets/img/comentarios/i8.webp"></td>
+                        <td>
+                          <font class="fb-comments-comment-name">
+                            <name>Mario Roberto Gomes</name>
+                          </font>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td class="fb-comments-comment-text">Hoje fez 5 dias tomando e 1 klos já conseguir eliminar tô muito feliz obrigado Marcos 😍😍😍</td>
+                      </tr>
+                      <tr>
+                        <td class="fb-comments-comment-actions">
+                          <like>Curtir</like>
+                          ·
+                          <reply>Comentar</reply>
+                          <date>1 h</date>
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+                <div class="fb-comments-wrapper" id="11">
+                  <table class="fb-comments-comment">
+                    <tbody>
+                      <tr>
+                        <td rowspan="3" class="fb-comments-comment-img"><img src="./assets/img/comentarios/i9.webp"></td>
+                        <td>
+                          <font class="fb-comments-comment-name">
+                            <name>Livia Santos</name>
+                          </font>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td class="fb-comments-comment-text">Marcos eu já estou tomando, já eliminei 7 kls, já fez muita diferença, minhas roupas estavam todas apertadas, agora já estão começando a ficar largas, estava sentindo muita dor no joelho e agora melhorou muito depois que emagreci 🙏🙏🙏</td>
+                      </tr>
+                      <tr>
+                        <td class="fb-comments-comment-actions">
+                          <like>Curtir</like>
+                          ·
+                          <reply>Comentar</reply>
+                          <date>1 h</date>
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+                <div class="fb-comments-wrapper" id="12">
+                  <table class="fb-comments-comment">
+                    <tbody>
+                      <tr>
+                        <td rowspan="3" class="fb-comments-comment-img"><img src="./assets/img/comentarios/i10.webp"></td>
+                        <td>
+                          <font class="fb-comments-comment-name">
+                            <name>Andressa Ramira</name>
+                          </font>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td class="fb-comments-comment-text">Muito Obrigado Cientista Marcos. Já estou vendo resultado ..🌹🥰🙋</td>
+                      </tr>
+                      <tr>
+                        <td class="fb-comments-comment-actions">
+                          <like>Curtir</like>
+                          ·
+                          <reply>Comentar</reply>
+                          <date>1 h</date>
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+                <div class="fb-comments-wrapper" id="13">
+                  <table class="fb-comments-comment">
+                    <tbody>
+                      <tr>
+                        <td rowspan="3" class="fb-comments-comment-img"><img src="./assets/img/comentarios/i11.webp"></td>
+                        <td>
+                          <font class="fb-comments-comment-name">
+                            <name>Diana Torres Romero</name>
+                          </font>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td class="fb-comments-comment-text">Em duas semanas comecei a ver resultados, muito boa essa fórmula caseira Marcos</td>
+                      </tr>
+                      <tr>
+                        <td class="fb-comments-comment-actions">
+                          <like>Curtir</like>
+                          ·
+                          <reply>Comentar</reply>
+                          <date>1 h</date>
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+                <div class="fb-comments-wrapper">
+                  <table class="fb-comments-comment" id="14">
+                    <tbody>
+                      <tr>
+                        <td rowspan="3" class="fb-comments-comment-img"><img src="./assets/img/comentarios/i12.webp"></td>
+                        <td>
+                          <font class="fb-comments-comment-name">
+                            <name>Bianca Guimaci</name>
+                          </font>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td class="fb-comments-comment-text">Minha irmão perdeu 6 kl em 15 dias com a sua fórmula Marcos... vou começar hj 🤣🤣🤣</td>
+                      </tr>
+                      <tr>
+                        <td class="fb-comments-comment-actions">
+                          <like>Curtir</like>
+                          ·
+                          <reply>Comentar</reply>
+                          <date>1 h</date>
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <br>
+    <br>
+    <footer class="bg-dark py-3 text-center">
+      <div class="text-white"><a href="#" class="text-white">Termos de Uso</a> | <a href="#" class="text-white">Política de Privacidade</a></div>
+    </footer>
+    <script type="text/javascript">
+      var tag = document.createElement('script');
+      tag.src = "https://www.youtube.com/iframe_api";
+      var firstScriptTag = document.getElementsByTagName('script')[0];
+      firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+      var player;
+      
+      function onYouTubeIframeAPIReady() {
+      player = new YT.Player('player', {
+      videoId: 'UXYUOJG2IVM',
+      playerVars: {
+      'autoplay': 1,
+      'controls': 0,
+      'rel': 0
+      },
+      events: {
+      'onReady': onPlayerReady,
+      'onStateChange': onPlayerStateChange
+      }
+      });
+      }
+      
+      function onPlayerReady(event) {
+      player.mute()
+      event.target.playVideo();
+      }
+      var done = false;
+      
+      function onPlayerStateChange(event) {
+      if (event.data == YT.PlayerState.PLAYING && !done) {
+      done = true;
+      }
+      }
+      setTimeout(() => {
+      
+      document.getElementById("cta1").classList.remove("d-none")
+      
+      }, 0); //832000
+    </script>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+    <script src="./assets/js/com.js"></script>
+  </body>
+</html>
